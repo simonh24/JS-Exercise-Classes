@@ -121,7 +121,7 @@ class Lambdasian {
   }
 
   speak() {
-    return `Hello my name is "${this.name}, I am from ${location}`;
+    return `Hello my name is "${this.name}, I am from ${this.location}`;
   }
 }
 
@@ -204,9 +204,10 @@ class Student extends Lambdasian {
         output = output + (this.favSubjects[i] + "!");
       }
     }
+    return output;
   }
 
-  prAssignment(subject) {
+  PRAssignment(subject) {
     return `${this.name} has submitted a PR for ${subject}`;
   }
 
@@ -239,7 +240,7 @@ class Student extends Lambdasian {
 class ProjectManager extends Instructor {
   constructor(attr) {
     super(attr);
-    this.gradeClassName = attr.gradClassName;
+    this.gradClassName = attr.gradClassName;
     this.favInstructor = attr.favInstructor;
   }
 
